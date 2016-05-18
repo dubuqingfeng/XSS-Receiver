@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆界面</title>
+    <link href="{{ static_url('css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{{ static_url('css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+<hgroup>
+    <h1>XSS Receiver</h1>
+    <h5>XSS平台</h5>
+</hgroup>
+<form method="post">
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="input_username" type="text" class="validate" name="username">
+            <label for="input_username">Username</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="input_password" type="password" class="validate" name="password">
+            <label for="input_password">Password</label>
+        </div>
+    </div>
+    <div class="row center">
+        <button class="btn-large waves-effect waves-light" type="submit" name="action">Submit
+        </button>
+    </div>
+</form>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{{ static_url('js/materialize.js') }}"></script>
+</body>
+</html>
