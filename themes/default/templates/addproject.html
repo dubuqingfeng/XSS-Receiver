@@ -22,9 +22,9 @@
                     <div class="input-field col s12">
                         <select multiple name="public">
                             <option value="" disabled selected>选择加载模块</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
+                            {% for public_item in public %}
+                            <option value="{{ public_item['name'] }}">{{ public_item['name'] }}</option>
+                            {% end %}
                         </select>
                         <label>公共模块</label>
                     </div>
@@ -33,9 +33,9 @@
                     <div class="input-field col s12">
                         <select multiple name="myjs">
                             <option value="" disabled selected>选择加载模块</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
+                            {% for myjs_item in myjs %}
+                            <option value="{{ myjs_item['name'] }}">{{ myjs_item['name'] }}</option>
+                            {% end %}
                         </select>
                         <label>我的JS</label>
                     </div>
@@ -61,4 +61,5 @@
     $(document).ready(function() {
         $('select').material_select();
     });
+
 </script>

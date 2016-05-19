@@ -19,11 +19,11 @@
                 {% if len(projects) > 0 %}
                 {% for project in projects %}
                 <tr>
-                    <td>{{ project['project_name'] }}</td>
+                    <td><a href="/admin/project?name={{ project['project_name'] }}"> {{ project['project_name'] }}</a></td>
                     <td>{{ project['project_desc'] }}</td>
-                    <td>0</td>
+                    <td>{{ project['count'] }}</td>
                     <td>{{ project['project_add_time'] }}</td>
-                    <td><a href="">查看JS</a>&nbsp;<a href="">删除</a></td>
+                    <td><a href="{{ static_url('project') }}/{{ project['project_name'] }}.js">查看JS</a>&nbsp;<a href=""></a></td>
                 </tr>
                 {% end %}
                 {% else %}

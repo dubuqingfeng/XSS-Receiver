@@ -12,7 +12,7 @@ ADD . /src
 RUN cd /src; pip install -r requirements.txt
 
 ENV USERNAME admin
-ENV PASSWORD admin
+ENV PASSWORD c33ba20b52f8aa5a8699deee49b54218
 
 EXPOSE 80
 

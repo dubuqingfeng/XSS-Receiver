@@ -1,42 +1,21 @@
 {% include header.html %}
 <div class="container">
     <div class="section">
-
-        <!--   Icon Section   -->
         <div class="row">
             <ul class="collapsible" data-collapsible="accordion">
+                {% if len(templates) > 0 %}
+                {% for template in templates %}
                 <li>
-                    <div class="collapsible-header active">First</div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    <div class="collapsible-header active">{{ template['name'] }}</div>
+                    <div class="collapsible-body"><p>{{ template['desc'] }}</p></div>
                 </li>
+                {% end %}
+                {% else %}
                 <li>
-                    <div class="collapsible-header">Second</div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    <div class="collapsible-header active">未找到相关模块</div>
+                    <div class="collapsible-body"><p>未找到相关模块.</p></div>
                 </li>
-                <li>
-                    <div class="collapsible-header">Third</div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Third</div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Third</div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Third</div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Third</div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                </li>
-                <li>
-                    <div class="collapsible-header">Third</div>
-                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                </li>
+                {% end %}
             </ul>
         </div>
     </div>

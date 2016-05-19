@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # coding=utf-8
+
 import tornado.web
 import configs
 
@@ -20,11 +21,12 @@ class BaseHandler(tornado.web.RequestHandler):
         if not user_id: return None
         return self.get_secure_cookie("user")
 
-    def get(self, *args, **kwargs):
-        self.write("test")
-
 
 class UserBaseHandler(BaseHandler):
     @tornado.web.authenticated
     def get(self, *args, **kwargs):
         print('test')
+
+    @tornado.web.authenticated
+    def prepare(self):
+        pass
