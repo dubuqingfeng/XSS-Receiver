@@ -12,9 +12,6 @@ def encrypt(password):
 
 
 class LoginHandler(BaseHandler):
-    def data_received(self, chunk):
-        pass
-
     def get(self, *args, **kwargs):
         if self.get_current_user():
             self.redirect(self.get_argument('next', '/'))
@@ -33,9 +30,6 @@ class LoginHandler(BaseHandler):
 
 
 class LogoutHandler(BaseHandler):
-    def data_received(self, chunk):
-        pass
-
     def get(self):
         if self.get_argument("logout", None):
             self.clear_all_cookies()

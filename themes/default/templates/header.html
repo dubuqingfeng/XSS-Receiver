@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <title>管理界面</title>
     <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{{ static_url('css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="{{ static_url('css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
@@ -14,10 +13,10 @@
     <div class="nav-wrapper container">
         <a id="logo-container" href="#" class="brand-logo">XSS Recevier</a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="#">接收面板</a></li>
-            <li><a href="#">我的js</a></li>
-            <li><a href="#">公共模块</a></li>
-            <li><a href="#">项目配置</a></li>
+            <li><a href="/admin/receiver">接收面板<span class="new badge"></span></a></li>
+            <li><a href="/admin/myjs">我的js</a></li>
+            <li><a href="/admin/templates">公共模块</a></li>
+            <li><a href="/admin/configs">项目配置</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">

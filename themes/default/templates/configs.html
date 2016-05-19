@@ -1,0 +1,40 @@
+{% include header.html %}
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <a href="/admin/addproject" class="waves-effect waves-light btn right">添加项目</a>
+        </div>
+        <div class="row card">
+            <table class="bordered highlight centered responsive-table">
+                <thead>
+                <tr>
+                    <th data-field="name">项目名称</th>
+                    <th data-field="desc">项目描述</th>
+                    <th data-field="number">内容数</th>
+                    <th data-field="date">添加时间</th>
+                    <th data-field="operation">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if len(projects) > 0 %}
+                {% for project in projects %}
+                <tr>
+                    <td>{{ project['project_name'] }}</td>
+                    <td>{{ project['project_desc'] }}</td>
+                    <td>0</td>
+                    <td>{{ project['project_add_time'] }}</td>
+                    <td><a href="">查看JS</a>&nbsp;<a href="">删除</a></td>
+                </tr>
+                {% end %}
+                {% else %}
+                <tr>
+                    <td colspan="5">未找到相关项目</td>
+                </tr>
+                {% end %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+</div>
+{% include footer.html %}

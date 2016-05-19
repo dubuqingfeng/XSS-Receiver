@@ -1,0 +1,64 @@
+{% include header.html %}
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <form class="col s12 card" method="post">
+                <div class="row">
+                    <h4 class="col s12">添加项目</h4>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input name="project_name" id="project_name" type="text" class="validate">
+                        <label for="project_name">项目名称</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="project_desc" name="project_desc" class="materialize-textarea"></textarea>
+                        <label for="project_desc">项目描述</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select multiple name="public">
+                            <option value="" disabled selected>选择加载模块</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>公共模块</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select multiple name="myjs">
+                            <option value="" disabled selected>选择加载模块</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>我的JS</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="project_custom" name="project_custom" class="materialize-textarea"></textarea>
+                        <label for="project_custom">自定义代码</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button class="btn-large waves-effect waves-light" type="submit" name="action">提交
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% include footer.html %}
+<script>
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+</script>
