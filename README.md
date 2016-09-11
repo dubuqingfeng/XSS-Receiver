@@ -14,7 +14,8 @@ docker run -d --name mongodb -p 27017:27017 -p 28017:28017 -e MONGODB_PASS="mypa
 ```
 
 ```
-
+docker pull index.alauda.cn/security/xss-receiver
+docker run --link mongodb -p 80:80 index.alauda.cn/security/xss-receiver
 ```
 
 
