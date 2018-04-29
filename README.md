@@ -1,12 +1,12 @@
-#XSS数据接收平台
+# XSS数据接收平台
 
 XSS Receiver Platform based on tornado.
 
-##平台说明
+## 平台说明
 
 可自由更改生成好的JS
 
-##平台部署
+## 平台部署
 
 ```
 docker pull index.alauda.cn/tutum/mongodb
@@ -19,12 +19,12 @@ docker run --link mongodb -p 80:80 index.alauda.cn/security/xss-receiver
 ```
 
 
-##目前支持功能
+## 目前支持功能
 
 + 导出数据
 + XSS cookie的接收
 
-##目录结构
+## 目录结构
 
 ```
 handlers                        Handler处理类文件夹
@@ -40,8 +40,8 @@ setting.py                      settings
 urls.py                         URL转发
 ```
 
-##js公共模块
+## js公共模块
 
-##TODO
+## TODO
 
-##关于
+## 关于
